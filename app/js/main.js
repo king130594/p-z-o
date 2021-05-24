@@ -13,7 +13,25 @@ $(function(){
         $('body').toggleClass('fixed-page');
 	});
 
- 
+ //форма обратной связи
+ $(function() {
+
+	//E-mail Ajax Send
+	$("#find-out-the-cost").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "sendmessage.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Message sent successfully");
+		});
+		return false;
+	});
+		debugger;
+		});
+
+
   $('header a').on('click', function(){
     $('.menu-burger__header').toggleClass('open-menu');
     $('.header__nav').toggleClass('open-menu');

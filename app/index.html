@@ -605,6 +605,10 @@
 	</footer>
 
 	<form id="find-out-the-cost" class="mfp-hide white-popup-block popup">
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="New contact">
+		<input type="hidden" name="admin_email" value="web@quokka.pro">
+		<input type="hidden" name="form_subject" value="Заявка с сайта">
 		<div class="popup__wrapper">
 			<div class="popup__btn-cl">
 				<a href="#" class="popup__btn-close popup-dismiss"></a>
@@ -615,15 +619,15 @@
 				</div>
 				<div class="popup__name">
 					<h4 class="popup__name-text">Name</h4>
-					<input type="text" class="popup__input popup__name-input" placeholder="john doe">
+					<input id="name" name="Имя" type="text" class="popup__input popup__name-input" placeholder="john doe">
 				</div>
 				<div class="popup__mail">
 					<h4 class="popup__mail-text">mail</h4>
-					<input type="text" class="popup__input popup__mail-input" placeholder="johndoe@mail.ru">
+					<input id="email" name="Почта" type="text" class="popup__input popup__mail-input" placeholder="johndoe@mail.ru">
 				</div>
 				<div class="popup__phone">
 					<h4 class="popup__phone-text">telephone</h4>
-					<input type="number" class="popup__input popup__phone-input" placeholder="+34 000 00 00">
+					<input id="phone" name="Телефон" type="tel" class="popup__input popup__phone-input" placeholder="+34 000 00 00" pattern="2[0-9]{3}-[0-9]{3}">
 				</div>
 				<div class="popup__btn">
 					<button type="submit" class="popup__btn-sub">send</button>
